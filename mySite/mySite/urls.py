@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^/', index, name="index"),
+    url(r'^search_results/$', search, name="search")
 ]
