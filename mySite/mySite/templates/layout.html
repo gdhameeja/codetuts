@@ -8,6 +8,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        a:hover{
+         text-decoration: none;
+        }
+
         .navbar-brand{
             font-family: Georgia;
             font-size: 35px;
@@ -18,7 +22,9 @@
             padding: 10px;
         }
     
-    
+        .search-area{
+        padding: 70;
+        }
     
     
     </style>
@@ -63,10 +69,10 @@
   </div>
 </nav>
    
-    <div class = "container-fluid">
+    <div class = "container-fluid search-area">
     <div class = "row">
-    <div id = "searchbar" class = "col-sm-12 text-center">
-   <form class="form-inline" action="{% url 'search' %}" method="get">
+    <div id = "searchbar" class = "col-sm-12">
+   <form class="form-inline text-center" action="{% url 'search' %}" method="get">
     <div class="input-group">
       <input type="text" class="form-control" size="50" placeholder="Search . . . " required name="search_bar">
       <div class="input-group-btn">

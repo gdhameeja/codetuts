@@ -14,11 +14,11 @@ class Topic(models.Model):
         ordering = ['title']
 # on call all() return title
     def __str__(self):
-        self.title
+      return self.title
 
 # get absolute URl for reference
-    def get_absolute_url(self):
-        pass
+   # def get_absolute_url(self):
+       # pass
 
 class Post(models.Model):
     title = models.CharField(max_length=70)
@@ -29,8 +29,8 @@ class Post(models.Model):
     class Admin:
         pass
     class Meta:
-        ordering = ['id']
+        pass
     def __str__(self):
         return self.title
     def get_absolute_url(self):
-        pass
+       return reverse("content_urls", kwargs={"slug":self.slug})

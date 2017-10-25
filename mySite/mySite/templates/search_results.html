@@ -4,10 +4,13 @@
 
 {% block search %}
 {% if query %}
-<h1> Results for '{{query|escape}}' </h1>
+<h5> Results for '{{query|escape}}' </h5>
     {% if results %}
         {% for result in results %}
-            <h2><a href = "{{result.get_absolute_url}}"></a>{{result.name}}</h2>
+            <h2><a href = "{{result.get_absolute_url}}">{{result.title}}</a></h2>
+            <br>
+            <h5>Topic : {{result.topic.title}}</h5>
+            <hr>
         {% endfor %}
     {% else %}
         <h4>No Results Found</h4>

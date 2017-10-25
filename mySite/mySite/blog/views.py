@@ -12,3 +12,6 @@ def search(request):
     else:
         results = []
     return render_to_response("search_results.html", {"query":query, "results":results})
+
+def django_handler(request, slug):
+    return  render_to_response("django/%s.html"%slug)
