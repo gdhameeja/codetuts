@@ -66,9 +66,9 @@
     <div class = "container-fluid">
     <div class = "row">
     <div id = "searchbar" class = "col-sm-12 text-center">
-   <form class="form-inline" action="{% url 'search' %}" method="get" name = "search_bar">
+   <form class="form-inline" action="{% url 'search' %}" method="get">
     <div class="input-group">
-      <input type="text" class="form-control" size="50" placeholder="Search . . . " required>
+      <input type="text" class="form-control" size="50" placeholder="Search . . . " required name="search_bar">
       <div class="input-group-btn">
         <button type="submit" class="btn btn-primary">Search</button>
       </div>

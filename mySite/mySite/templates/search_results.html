@@ -2,4 +2,16 @@
 
 {% block title %} Search Results {% endblock %}
 
-{% block search %} Search is under construction . . .{% endblock %}
+{% block search %}
+{% if query %}
+<h1> Results for '{{query|escape}}' </h1>
+    {% if results %}
+        {% for result in results %}
+            <h2><a href = "{{result.get_absolute_url}}"></a>{{result.name}}</h2>
+        {% endfor %}
+    {% else %}
+        <h4>No Results Found</h4>
+    {% endif %}
+
+{% endif %}
+{% endblock %}
