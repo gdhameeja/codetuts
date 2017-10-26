@@ -8,6 +8,17 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <style>
+         html, body{
+         height: 100%;
+         padding: 0;
+         margin: 0;
+
+         }
+         #wrapper{
+         min-height: 100%;
+         overflow: auto
+         padding-bottom: 50px;
+         }
          a:hover{
          text-decoration: none;
          }
@@ -16,17 +27,34 @@
          font-size: 35px;
          font-weight: bold;
          }
-         .myFooter{
-         color: #fff;
-         padding: 10px;
-         }
+         
          .search-area{
          padding: 70;
          }
+          #footer{
+              background-color: black;
+              position: relative;
+              height: 90px;
+              clear: both;
+              padding: 20;
+              color: #fff;
+              
+          }
+          #footer li {
+              display: inline-block;
+              float: right;
+              padding: 10;
+              
+              color: #fff;
+          }
+          footer a:hover{
+              color: #fff;
+          }
       </style>
    </head>
    <body>
-      <nav class="navbar  navbar-inverse">
+   <div id = "wrapper">
+      <nav class="navbar-fixed-top  navbar-inverse">
          <div class="container">
             <button type="button" class="navbar-toggle"
                data-toggle="collapse"
@@ -90,21 +118,21 @@
             {% block ads %}{% endblock %}
          </div>
       </div>
-      </div>
-      <div class="navbar  navbar-inverse navbar-fixed-bottom myFooter">
-         <div class="container">
-            <div>
-               <p> © Company 2017.</p>
-               <ul class="nav navbar-nav navbar-right">
-                  <li>
+
+       </div>
+     
+       <footer id = "footer">
+          
+       <p> © Company 2017.</p>
+            <ul><li>
                      <a href = ""><span class = "fa fa-facebook"/></a>
                   </li>
                   <li><a href="#"><span class = "fa fa-github"/></a> </li>
                   <li> <a href="#"><span class = "fa fa-envelope"</a> </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      </nav>
+
+                </li>
+           </ul>
+          
+                </footer>
    </body>
 </html>
